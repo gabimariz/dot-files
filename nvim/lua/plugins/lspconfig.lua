@@ -31,14 +31,14 @@ return {
               globals = { "vim" },
             },
             format = {
-              enable = false,
+              enable = true,
             },
           },
         }
 
         config.on_attach = function(client, bufnr)
-          client.server_capabilities.documentFormattingProvider = false
-          client.server_capabilities.documentRangeFormattingProvider = false
+          client.server_capabilities.documentFormattingProvider = true
+          client.server_capabilities.documentRangeFormattingProvider = true
         end
       end
 
@@ -53,6 +53,10 @@ return {
             ["textDocument/definition"] = require("omnisharp_extended").handler,
           }
         }
+      end
+
+      if server == "clangd" then
+        config = {}
       end
 
       vim.lsp.config[server] = config
