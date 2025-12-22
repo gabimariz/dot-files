@@ -14,6 +14,7 @@ return {
       "lua_ls",
       "clangd",
       "omnisharp",
+      "cmake",
     }
 
     require("mason").setup()
@@ -56,6 +57,10 @@ return {
       end
 
       if server == "clangd" then
+        config = {}
+      end
+
+      if server == "cmake" then
         config = {}
       end
 
