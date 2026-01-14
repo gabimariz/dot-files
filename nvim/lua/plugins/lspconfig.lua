@@ -15,6 +15,7 @@ return {
       "clangd",
       "omnisharp",
       "cmake",
+      "bacon_ls"
     }
 
     require("mason").setup()

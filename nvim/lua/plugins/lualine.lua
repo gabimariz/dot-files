@@ -496,7 +496,7 @@ return {
           tsserver = "ts",
           rust_analyzer = "rs",
           lua_ls = "lua",
-          clangd = "c++",
+          clangd = "C/C++",
           bashls = "sh",
           jsonls = "json",
           html = "html",
@@ -505,7 +505,8 @@ return {
           dockerls = "docker",
           sqlls = "sql",
           yamlls = "yml",
-          omnisharp = "c#",
+          omnisharp = "C#",
+          bacon_ls = "rust",
         }
         for _, client in ipairs(clients) do
           local filetypes = client.config.filetypes
